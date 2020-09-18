@@ -1,0 +1,30 @@
+﻿<Window x:Class="Polttopallo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Polttopallo"
+        mc:Ignorable="d"
+        Title="Polttopallo" Height="523.636" Width="1159.44">
+    <Grid Margin="54,10,-77,-48" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="199*"/>
+            <RowDefinition Height="348*"/>
+        </Grid.RowDefinitions>
+
+        <Canvas x:Name="Kanvaasi" HorizontalAlignment="Left" Width="830" Height="390" VerticalAlignment="Top" Background="#FF166E16" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.643"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Image x:Name="Kuva" Height="70" Source="img/vesinokka.png" Stretch="Fill" Width="80" Canvas.Left="249" Canvas.Top="125" MouseDown="Image_MouseDown"/>
+
+        </Canvas>
+        <TextBlock x:Name="Pisteet" HorizontalAlignment="Left" Height="54" Margin="880,29,0,0" TextWrapping="Wrap" Text="Pisteet: 0" VerticalAlignment="Top" Width="116" FontSize="20"/>
+        <TextBlock x:Name="Hudit" HorizontalAlignment="Left" Height="54" Margin="880,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" FontSize="20"><Run Text="Hudi"/><Run Text="t: "/><Run Text="0"/></TextBlock>
+    </Grid>
+</Window>
